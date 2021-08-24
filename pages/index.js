@@ -1,11 +1,12 @@
 import Head from "next/head";
 import Navbar from "../pages/components/Navbar";
-// import PeeginsDisplay from "../pages/components/PeeginsDisplay";
+import PeeginDisplay from "../pages/components/PeeginDisplay";
 import { useState, useEffect } from "react";
 import AddWordModal from "./components/AddWordModal";
 import AddPeeginForm from "./components/AddPeeginForm";
 import TopRightSideBar from "./components/TopRightSideBar";
 import LeftSideBar from "./components/LeftSideBar";
+import BottomRightSideBar from "./components/BottomRightSideBar";
 
 export async function getStaticProps() {
   const response = await fetch("https://peegin.com/api/public/peegins/recent");
@@ -168,26 +169,7 @@ const Homepage = ({ data }) => {
         </div>
 
         <div className="peegindisplay">
-          {/* <PeeginsDisplay data2={peegins} load={loading} /> */}
-          <div>
-            <h1>Recent Peegin</h1>
-            {loading && <h1 className="loading">Loading...</h1>}
-            {peegins.map((peegin) => (
-              <div className="preview" key={peegin?.permalink}>
-                <h3 className="title">{peegin?.title}</h3>
-                <p>{peegin?.meaning}</p>
-                <p className="example">Example</p>
-                <p className="example-content">{peegin?.example}</p>
-                {/* <p className="origin">Origin: {peegin?.origin}</p> */}
-                <div className="name">
-                  <h4>By</h4> &nbsp;
-                  <h4 className="namegreen">{peegin?.user?.name}</h4> &nbsp;
-                  <h4>{peegin?.created_at}</h4>
-                </div>
-                <p className="views">{peegin?.views?.view} Views</p>
-              </div>
-            ))}
-          </div>
+          <PeeginDisplay data2={peegins} load={loading} />
         </div>
 
         <div className="toprightsidebar">
@@ -195,6 +177,7 @@ const Homepage = ({ data }) => {
           <div className="addNewWord">
             <button onClick={modalButton}>{open}</button>
           </div>
+          <BottomRightSideBar />
         </div>
       </div>
     </div>

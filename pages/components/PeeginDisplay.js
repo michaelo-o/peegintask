@@ -1,4 +1,4 @@
-const PeeginDisplay = () => {
+const PeeginDisplay = (props) => {
     const peegins = props.data2;
     const loading = props.load;
 

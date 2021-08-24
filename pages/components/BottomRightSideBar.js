@@ -1,8 +1,10 @@
 const BottomRightSideBar = () => {
   return (
     <>
-      <h1>BRSB</h1>
-      <p>trhhth</p>
+      <div className="preview">
+        <h1>BRSB</h1>
+        <p>trhhth</p>
+      </div>
     </>
   );
 };
