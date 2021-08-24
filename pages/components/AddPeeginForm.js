@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import AddWordModal from "./AddWordModal"
-import PeeginsDisplay from "./PeeginsDisplay"
 
 
 
