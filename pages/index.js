@@ -170,7 +170,7 @@ const Homepage = ({ data }) => {
         <div className="peegindisplay">
           <PeeginsDisplay data2={peegins} load={loading} />
         </div>
-
+        
         <div className="toprightsidebar">
           <TopRightSideBar />
           <div className="addNewWord">
