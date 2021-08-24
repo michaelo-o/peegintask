@@ -1,0 +1,255 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Calibri;
+  background-color: #f1ecec;
+}
+
+.content {
+  grid-area: main;
+  margin: 0px auto;
+  padding: 0px;
+  overflow-x: hidden;
+  background-color: transparent;
+}
+
+.grid {
+  padding: 0 5%;
+  margin: 5% auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+/* Sidebar/left column */
+.leftsidebar {
+  flex: 20%;
+  background-color: transparent;
+  padding: 20px;
+}
+.formclosebutton {
+  float: right;
+}
+/* Main column */
+.peegindisplay {
+  flex: 45%;
+  background-color: transparent;
+  padding: 20px;
+  margin: 0;
+}
+
+.toprightsidebar {
+  flex: 20%;
+  background-color: transparent;
+  padding: 20px;
+}
+.preview {
+  background-color: white;
+  padding: 10px 20px;
+  margin: 20px 0;
+  border-bottom: 2px solid blanchedalmond;
+  border-radius: 14px;
+}
+.browse {
+  background-color: white;
+  padding: 10px 20px;
+  margin: 20px 0;
+  border-bottom: 2px solid blanchedalmond;
+  border-radius: 14px;
+}
+.browse > h2 {
+  font-weight: lighter;
+}
+.wordofday {
+  background-color: #9ec6dd6b !important;
+  padding: 10px 20px;
+  margin: 20px 0;
+  border-bottom: 2px solid blanchedalmond;
+  border-radius: 14px;
+}
+/* .preview:hover {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  border-right: 5px solid blanchedalmond;
+  border-bottom: 5px solid blanchedalmond;
+  border-top: 3px dashed blanchedalmond;
+} */
+.brandlogo {
+  background-color: #ffd200;
+  border-radius: 10px;
+  padding: 20%;
+  margin: 0 0 20px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #c1c1c1;
+  border-radius: 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+textarea {
+  border: 1px solid #c1c1c1;
+  border-radius: 10px;
+}
+.submitbutton {
+  cursor: pointer;
+  padding: 6px 12px;
+  background-color: #3a434c;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.backbutton {
+  cursor: pointer;
+  padding: 6px 12px;
+  background-color: #3a434c;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.example {
+  font-weight: bold;
+}
+.example-content {
+  font-style: italic;
+}
+.views {
+  background-color: greenyellow;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 12px;
+  font-style: italic;
+}
+.namegreen {
+  color: #28e2b7;
+}
+.name {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.title {
+  background-color: #ffd200;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+}
+.origin {
+  color: #ffd200;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #182634;
+  font-style: italic;
+}
+
+.addNewWord > button {
+  padding: 10px;
+  color: #28e2b7;
+  text-align: center;
+  background-color: #111d4a;
+  width: 100%;
+  border: 1px solid rgba(24, 38, 52);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.addpeegin {
+  margin: 10px auto;
+  background-color: white;
+  border: 5px solid;
+  box-shadow: 2px 1px 20px 0px rgba(17, 29, 74, 1);
+  padding: 15px;
+  overflow-x: hidden;
+}
+
+.contentof {
+  position: absolute;
+  background: rgba(24, 38, 52, 0.4);
+  width: 100%;
+  padding: 0 20%;
+  overflow-x: hidden;
+  z-index: +1;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111d4a;
+  color: #28e2b7;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #28e2b7;
+  width: 100%;
+  padding: 13px 15px;
+  position: fixed;
+  margin-bottom: 0;
+}
+.logo {
+  padding: auto;
+  width: 10%;
+  margin-left: 7%;
+}
+.search {
+  width: 80%;
+  margin: auto;
+}
+.search [type="text"] {
+  width: 80%;
+  border: 1px solid transparent;
+  padding: 10px 20px;
+  margin: 8px 0 0;
+}
+.search > input[type="text"]:focus {
+  border: 1px dashed red;
+}
+/* ////////////////////////////////////////////////////////////////////// */
+.search[placeholder] {
+  text-align: center;
+}
+.submitsearchbutton {
+  cursor: pointer;
+  padding: 12px 12px;
+  background-color: #3a434c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width: 700px) {
+  .contentof {
+    position: absolute;
+    background: rgba(24, 38, 52, 0.4);
+    width: 100%;
+    padding: 0 2%;
+    overflow-x: hidden;
+  }
+  .search [type="text"] {
+    width: 60%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
