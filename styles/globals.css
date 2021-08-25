@@ -15,7 +15,7 @@ body {
 }
 
 .grid {
-  padding: 0 5%;
+  padding: 0 7%;
   margin: 5% auto;
   display: flex;
   flex-wrap: wrap;
@@ -37,10 +37,21 @@ body {
   margin: 0;
 }
 
-.toprightsidebar {
+.rightsidebar {
   flex: 20%;
   background-color: transparent;
   padding: 20px;
+}
+.bottomrightsidebar {
+  flex: 20%;
+  background-color: white;
+  padding: 20px;
+  margin-top: 5%;
+  border-bottom: 2px solid blanchedalmond;
+  border-radius: 14px;
+}
+.bottomrightsidebar>h2{
+  font-weight: lighter;
 }
 .preview {
   background-color: white;
@@ -219,7 +230,7 @@ textarea {
   width: 80%;
   border: 1px solid transparent;
   padding: 10px 20px;
-  margin: 8px 0 0;
+  margin: 0;
 }
 .search > input[type="text"]:focus {
   border: 1px dashed red;
@@ -230,7 +241,7 @@ textarea {
 }
 .submitsearchbutton {
   cursor: pointer;
-  padding: 12px 12px;
+  padding: 13px 12px;
   background-color: #3a434c;
   color: white;
   border: none;

@@ -1,4 +1,5 @@
-import Image from "next/dist/client/image";
+import Image from "next/image";
+import Link from "next/link";
 const Navbar = () => {
   function submit(event) {
     event.preventDefault();
@@ -7,12 +8,13 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-        <div className="logo"><Image
-              src="/logo.png"
-              alt="site logo"
-              width={170}
-              height={53}
-            /></div>
+      <div className="logo">
+        <Link href="/">
+          <a>
+            <Image src="/logo.png" alt="site logo" width={170} height={53} />
+          </a>
+        </Link>
+      </div>
 
       <div className="search">
         <form onSubmit={submit}>

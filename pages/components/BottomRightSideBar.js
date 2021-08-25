@@ -1,9 +1,9 @@
 const BottomRightSideBar = () => {
   return (
     <>
-      <div className="preview">
-        <h1>BRSB</h1>
-        <p>trhhth</p>
+      <div className="bottomrightsidebar">
+        <h2>Trending Words</h2>
+        <p>stuff that trend</p>
       </div>
     </>
   );
