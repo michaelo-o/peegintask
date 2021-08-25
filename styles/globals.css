@@ -9,13 +9,19 @@ body {
   border-bottom: 0.1px solid black;
 }
 .content {
-  grid-area: main;
   margin: 0px auto;
   padding: 0px;
   overflow-x: hidden;
   background-color: transparent;
 }
-
+.thepeegins {
+  margin:  4%;
+  /* padding: 4%; */
+}
+.permalink{
+  margin: 0 auto;
+  padding: 1% 0%;
+}
 .grid {
   padding: 0 7%;
   margin: 5% auto;
@@ -227,6 +233,7 @@ textarea {
   position: fixed;
   margin-bottom: 0;
   z-index: +1;
+  margin-top: 0;
 }
 .logo {
   padding: auto;

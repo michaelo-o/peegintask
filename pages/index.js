@@ -94,10 +94,10 @@ const Homepage = ({ data }) => {
               addnew={open}
               addnew2={setOpen}
               data1={isOpen}
-              data2={setISOpen}
+              data3={setISOpen}
             />
           </div>
-          <LeftSideBar data={peegins} />
+          <LeftSideBar woday={peegins} />
         </div>
 
         <div className="peegindisplay">
@@ -111,7 +111,7 @@ const Homepage = ({ data }) => {
             addnew={open}
             addnew2={setOpen}
             data1={isOpen}
-            data2={setISOpen}
+            data3={setISOpen}
           />
           <BottomRightSideBar />
         </div>

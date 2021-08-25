@@ -1,3 +1,4 @@
+import Link from "next/link";
 const ListOfRecents = (props) => {
   const peegins = props.data2;
   const loading = props.load;
@@ -9,7 +10,11 @@ const ListOfRecents = (props) => {
       {peegins &&
         peegins.map((peegin) => (
           <div className="preview" key={peegin?.permalink}>
-            <h3 className="title">{peegin?.title}</h3>
+            <Link href={"/" + peegin?.permalink}>
+              <a>
+                <h3 className="title">{peegin?.title}</h3>
+              </a>
+            </Link>
             <p>{peegin?.meaning}</p>
             <p className="example">Example</p>
             <p className="example-content">{peegin?.example}</p>

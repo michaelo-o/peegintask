@@ -3,7 +3,7 @@ import AddWordModal from "./AddWordModal";
 
 const AddPeeginForm = (props) => {
   const isOpen = props.data1;
-  const setISOpen = props.data2;
+  const setISOpen = props.data3;
   const open = props.addnew
   const setOpen = props.addnew2
   const submitbutton = props.submit;

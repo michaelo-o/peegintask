@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 
 const LeftSideBar = (props) => {
-  const peegins = props.data;
+  const peeginswod = props.woday;
 
   const [wods, SetWods] = useState();
 
   useEffect(() => {
-    SetWods(peegins[Math.floor(Math.random() * peegins.length)]);
-  }, [peegins]);
+    SetWods(peeginswod[Math.floor(Math.random() * peeginswod.length)]);
+  }, [peeginswod]);
 
   return (
     <>
