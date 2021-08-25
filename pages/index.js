@@ -56,10 +56,6 @@ const Homepage = ({ data }) => {
   //   setAddedPeegin(data.peegins)
   // }, [peegins]);
 
-  const backButton = () => {
-    setISOpen(!isOpen);
-    setOpen("Add New Word");
-  };
 
   const modalButton = () => {
     setISOpen(!isOpen);
@@ -88,9 +84,7 @@ const Homepage = ({ data }) => {
 
         <div className="rightsidebar">
           <TopRightSideBar />
-          <div className="addNewWord">
-            <button onClick={modalButton}>{open}</button>
-          </div>
+          <AddWordModal modalButton={modalButton} addnew={open} addnew2={setOpen} data1={isOpen} data2={setISOpen}/>
           <BottomRightSideBar />
         </div>
       </div>

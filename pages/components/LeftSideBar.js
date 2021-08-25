@@ -12,6 +12,7 @@ const LeftSideBar = (props) => {
   return (
     <>
       <h2>Word of the day</h2>
+      <h4>(Actually just a Random Peegin)</h4>
       <div className="wordofday" key={wods?.permalink}>
         <h3 className="title">{wods?.title}</h3>
         <p className="example">Meaning</p>
