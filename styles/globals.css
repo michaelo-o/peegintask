@@ -5,8 +5,8 @@ body {
   font-family: Calibri;
   background-color: #f1ecec;
 }
-.wodhead{
-  border-bottom: 1px solid black;
+.wodhead {
+  border-bottom: 0.1px solid black;
 }
 .content {
   grid-area: main;
@@ -59,7 +59,7 @@ body {
   border-bottom: 2px solid blanchedalmond;
   border-radius: 14px;
 }
-.bottomrightsidebar>h2{
+.bottomrightsidebar > h2 {
   font-weight: lighter;
 }
 .preview {
@@ -259,49 +259,16 @@ textarea {
   border-radius: 4px;
 }
 
-.footer{
+.footer {
   background-color: #182634;
-  color: #FFD200;
+  color: #ffd200;
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 1% 1%;
 }
-.mobileaddword{
+.mobileaddword {
   display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* MOBILE STYLING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 @media only screen and (max-width: 700px) {
@@ -316,154 +283,35 @@ textarea {
     width: 60%;
   }
 
-.grid .leftsidebar .bottomrightsidebar .rightsidebar{
-  padding: 0 0%;
-  margin: 5% 0;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  .grid .leftsidebar .bottomrightsidebar .rightsidebar {
+    padding: 0 0%;
+    margin: 5% 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .browse {
+    display: none;
+  }
+  .leftsidebar {
+    margin-top: 30%;
+    padding: 0%;
+  }
+  .rightsidebar {
+    display: none;
+  }
+  .peegindisplay {
+    padding: 0;
+  }
+
+  .mobileaddword {
+    display: inline;
+  }
+
+  .wordofday {
+    margin-top: 5%;
+  }
 }
-.browse{
-  display: none;
-}
-.leftsidebar{
-  margin-top: 30%;
-  padding: 0%;
-}
-.rightsidebar{
-  display: none;
-}
-.peegindisplay{
-  padding: 0;
-}
-
-.mobileaddword{
-  display: inline;
-}
-
-.wordofday{
-  margin-top: 5%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 * {
   box-sizing: border-box;
