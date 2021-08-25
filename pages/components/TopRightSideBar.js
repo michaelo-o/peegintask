@@ -1,21 +1,20 @@
 import Image from "next/image";
 
 const RightSideBar = () => {
-    return ( 
-        <>
-        <h2>Rightside</h2>
-          <div className="brandlogo">
-            <div className="imgb">
-            <Image
-              src="/peegin-brand.png"
-              alt="site logo"
-              width={210}
-              height={100}
-            />
-            </div>
-          </div>
-        </>
-     );
-}
- 
+  return (
+    <>
+      <div className="brandlogo">
+        <div className="imgb">
+          <Image
+            src="/peegin-brand.png"
+            alt="site logo"
+            width={210}
+            height={100}
+          />
+        </div>
+      </div>
+    </>
+  );
+};
+
 export default RightSideBar;

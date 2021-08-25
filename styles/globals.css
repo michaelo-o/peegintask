@@ -5,7 +5,9 @@ body {
   font-family: Calibri;
   background-color: #f1ecec;
 }
-
+.wodhead{
+  border-bottom: 1px solid black;
+}
 .content {
   grid-area: main;
   margin: 0px auto;
@@ -19,12 +21,15 @@ body {
   margin: 5% auto;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 /* Sidebar/left column */
 .leftsidebar {
+  margin-top: 2%;
   flex: 20%;
   background-color: transparent;
   padding: 20px;
+  width: auto;
 }
 .formclosebutton {
   float: right;
@@ -35,12 +40,15 @@ body {
   background-color: transparent;
   padding: 20px;
   margin: 0;
+  width: 100%;
 }
 
 .rightsidebar {
+  margin-top: 2%;
   flex: 20%;
   background-color: transparent;
   padding: 20px;
+  width: auto;
 }
 
 .bottomrightsidebar {
@@ -74,7 +82,7 @@ body {
 .wordofday {
   background-color: #9ec6dd6b !important;
   padding: 10px 20px;
-  margin: 20px 0;
+  margin: 0;
   border-bottom: 2px solid blanchedalmond;
   border-radius: 14px;
 }
@@ -189,6 +197,7 @@ textarea {
   padding: 0 20%;
   overflow-x: hidden;
   z-index: +1;
+  height: 100%;
 }
 
 .loading {
@@ -214,9 +223,10 @@ textarea {
   flex-wrap: wrap;
   background-color: #28e2b7;
   width: 100%;
-  padding: 13px 15px;
+  padding: 1% 1%;
   position: fixed;
   margin-bottom: 0;
+  z-index: +1;
 }
 .logo {
   padding: auto;
@@ -249,6 +259,51 @@ textarea {
   border-radius: 4px;
 }
 
+.footer{
+  background-color: #182634;
+  color: #FFD200;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.mobileaddword{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MOBILE STYLING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 @media only screen and (max-width: 700px) {
   .contentof {
     position: absolute;
@@ -260,7 +315,155 @@ textarea {
   .search [type="text"] {
     width: 60%;
   }
+
+.grid .leftsidebar .bottomrightsidebar .rightsidebar{
+  padding: 0 0%;
+  margin: 5% 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
+.browse{
+  display: none;
+}
+.leftsidebar{
+  margin-top: 30%;
+  padding: 0%;
+}
+.rightsidebar{
+  display: none;
+}
+.peegindisplay{
+  padding: 0;
+}
+
+.mobileaddword{
+  display: inline;
+}
+
+.wordofday{
+  margin-top: 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 * {
   box-sizing: border-box;

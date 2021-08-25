@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Navbar from "../pages/components/Navbar";
 import PeeginDisplay from "../pages/components/PeeginDisplay";
 import { useState, useEffect } from "react";
 import AddWordModal from "./components/AddWordModal";
@@ -7,6 +6,7 @@ import AddPeeginForm from "./components/AddPeeginForm";
 import TopRightSideBar from "./components/TopRightSideBar";
 import LeftSideBar from "./components/LeftSideBar";
 import BottomRightSideBar from "./components/BottomRightSideBar";
+
 
 export async function getStaticProps() {
   const response = await fetch("https://peegin.com/api/public/peegins/recent");
@@ -67,7 +67,6 @@ const Homepage = ({ data }) => {
       <Head>
         <title>Peegin Recent</title>
       </Head>
-      <Navbar />
 
       {isOpen ? (
             <AddPeeginForm  title={title} meaning={meaning} origin={origin} example={example} name={name} data1={isOpen} data2={setISOpen} submit={handleSubmit} addnew={open} addnew2={setOpen} setTitle={setTitle} setName={setName} setMeaning={setMeaning} setOrigin={setOrigin} setExample={setExample} /> 
@@ -75,6 +74,9 @@ const Homepage = ({ data }) => {
 
       <div className="grid">
         <div className="leftsidebar">
+        <div className="mobileaddword">
+        <AddWordModal modalButton={modalButton} addnew={open} addnew2={setOpen} data1={isOpen} data2={setISOpen}/>
+        </div>
           <LeftSideBar data={peegins} />
         </div>
 
