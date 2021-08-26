@@ -68,6 +68,17 @@ body {
 .bottomrightsidebar > h2 {
   font-weight: lighter;
 }
+.backtop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: sticky;
+  top: 10px;
+  right: 0;
+  /* float: right; */
+  width: 5%;
+}
 .preview {
   background-color: white;
   padding: 1% 5%;
@@ -248,6 +259,7 @@ textarea {
   width: 80%;
   margin: auto;
   padding: 0;
+  
 }
 .search [type="text"] {
   width: 80%;
@@ -260,20 +272,20 @@ textarea {
   border: 1px dashed red;
 }
 /* ////////////////////////////////////////////////////////////////////// */
-::-webkit-input-placeholder { /*CENTRALIZE INPUT PLACEHOLDER*/
+/*CENTRALIZE INPUT PLACEHOLDER*/
+/* ::-webkit-input-placeholder {
   text-align: center;
-}
+} */
+
 .submitsearchbutton {
   cursor: pointer;
   background-color: white;
   border: none;
   border-radius: 0px 6px 6px 0px;
-  padding: 0 auto;
 }
-.mobilesearchsumbit {
+.mobilesearch {
   display: none;
 }
-
 .footer {
   display: flex;
   flex-direction: row;
@@ -328,14 +340,15 @@ textarea {
   width: 80%;
   font-weight: lighter;
 }
-.termsandprivacy>h1, h2 {
-  font-weight:360;
+.termsandprivacy > h1,
+h2 {
+  font-weight: 360;
 }
-.termsandprivacy>h1{
+.termsandprivacy > h1 {
   text-align: center;
 }
 
-.termsandprivacy>p>a{
+.termsandprivacy > p > a {
   color: #28e2b7;
 }
 .termsof {
@@ -357,35 +370,32 @@ textarea {
     overflow-x: hidden;
   }
   .search [type="text"] {
-    width: 70%;
-    border: 1px solid transparent;
-    padding: 5px 10px;
-    margin: 0;
-    margin-right: 10%;
-
+    display: none;
   }
- 
+  .search {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
   .submitsearchbutton {
     display: none;
   }
-  .mobilesearchsumbit {
+  .mobilesearch {
     display: inline;
-    padding: 7px 7px;
-    cursor: pointer;
-    background-color: #3a434c;
-    color: white;
+    background: transparent;
     border: none;
-    border-radius: 4px;
-    width: auto;
   }
   .logo {
     width: 30%;
     padding: 0;
-    margin: .5%;
-    margin-right: 5%;
+    margin: 0.5%;
+    margin-right: 1%;
   }
-  .navbar{
+  .navbar {
     padding: 5%;
+    width: 100%;
   }
 
   .grid .leftsidebar .bottomrightsidebar .rightsidebar {
@@ -399,7 +409,7 @@ textarea {
     display: none;
   }
   .leftsidebar {
-    margin-top: 20%;
+    margin-top: 22%;
     padding: 0%;
   }
   .rightsidebar {
