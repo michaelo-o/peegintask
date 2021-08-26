@@ -20,7 +20,7 @@ const TermsOfService = () => {
           </Link>
           Questions about the Terms of Service may be sent to this address:
           <Link href="legal@peegin.com">
-            <a> legal@peegin.com</a>
+            <a target="_blank"> legal@peegin.com</a>
           </Link>
         </p>
         <h2>Usage Terms</h2>
@@ -188,9 +188,10 @@ const TermsOfService = () => {
         </p>
         <p>
           Use of the Website is also governed by our Privacy Policy, a copy of
-          which is currently located at <Link href="/privacypolicy">
+          which is currently located at{" "}
+          <Link href="/privacypolicy">
             <a> http://peegin.com/pages/privacy </a>
-          </Link> 
+          </Link>
         </p>
 
         <h2>Copyright and Ownership</h2>
