@@ -4,50 +4,47 @@ import AddWordModal from "./AddWordModal";
 const AddPeeginForm = (props) => {
   const isOpen = props.data1;
   const setISOpen = props.data3;
-  const open = props.addnew
-  const setOpen = props.addnew2
+  const open = props.addnew;
+  const setOpen = props.addnew2;
   const submitbutton = props.submit;
 
-  const title = props.title 
-  const setTitle = props.setTitle 
-  const meaning = props.meaning
-  const setMeaning = props.setMeaning 
-  const example = props.example
-  const setExample = props.setExample 
-  const origin = props.origin
-  const setOrigin = props.setOrigin
-  const name = props.name
-  const setName =  props.setName 
+  const title = props.title;
+  const setTitle = props.setTitle;
+  const meaning = props.meaning;
+  const setMeaning = props.setMeaning;
+  const example = props.example;
+  const setExample = props.setExample;
+  const origin = props.origin;
+  const setOrigin = props.setOrigin;
+  const name = props.name;
+  const setName = props.setName;
 
+  //   const handleSubmit = (event) => {
+  //     event.preventDefault();
 
-//   const handleSubmit = (event) => {
-//     event.preventDefault();
+  //     const newPeegin = { title, meaning, example, origin, user: { name } };
 
-//     const newPeegin = { title, meaning, example, origin, user: { name } };
+  //     console.log("new word added");
+  //     console.log(newPeegin);
+  //     setISOpen(false);
+  //     setOpen("Add New Word");
 
-//     console.log("new word added");
-//     console.log(newPeegin);
-//     setISOpen(false);
-//     setOpen("Add New Word");
+  //     peegins.unshift(newPeegin); //to add to the top of the array
 
-//     peegins.unshift(newPeegin); //to add to the top of the array
+  //     console.log(peegins);
+  //   };
 
-//     console.log(peegins);
-//   };
+  // fetch(npg, {
+  //     method: 'POST',
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(newPeegin)
+  // }).then(() => {
+  //     })
 
-
-    // fetch(npg, {
-    //     method: 'POST',
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify(newPeegin)
-    // }).then(() => {
-    //     })
-
-
-    const backButton = () => {
-        setISOpen(!isOpen);
-        setOpen("Add New Word");
-      };
+  const backButton = () => {
+    setISOpen(!isOpen);
+    setOpen("Add New Word");
+  };
 
   return (
     <>
