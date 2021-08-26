@@ -27,14 +27,14 @@ const Footer = () => {
         <p>
           A Side Project by
           <Link href="https://web.facebook.com/michael.okwuosah/">
-            <a> Michael Okwuosah</a>
+            <a target="_blank"> Michael Okwuosah</a>
           </Link>
         </p>
 
         <p>
           This is a clone of
           <Link href="https://peegin.com/">
-            <a> Peegin.com</a>
+            <a target="_blank"> Peegin.com</a>
           </Link>
         </p>
       </div>
