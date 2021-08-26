@@ -4,10 +4,40 @@ const Footer = () => {
     <div className="footer">
       <div className="backtotop">
         <Link href="/">
-          <a>Back To Top</a>
+          <a>
+            <p>Back To Home/Top</p>
+          </a>
         </Link>
       </div>
-      <h1>Footer.exe</h1>
+      <div className="copyright">
+        <p>© 2021 Copyright</p>
+      </div>
+      <div className="footterms">
+        <p>
+          <Link href="/termsofservice">
+            <a>Terms Of Service</a>
+          </Link>
+          <a className="divider"> | </a>
+          <Link href="/privacypolicy">
+            <a>Privacy Policy</a>
+          </Link>
+        </p>
+      </div>
+      <div className="project">
+        <p>
+          A Side Project by
+          <Link href="https://web.facebook.com/michael.okwuosah/">
+            <a> Michael Okwuosah</a>
+          </Link>
+        </p>
+
+        <p>
+          This is a clone of
+          <Link href="https://peegin.com/">
+            <a> Peegin.com</a>
+          </Link>
+        </p>
+      </div>
     </div>
   );
 };

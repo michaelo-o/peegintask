@@ -1,10 +1,10 @@
 import Head from "next/dist/shared/lib/head";
-import AddWordModal from "./components/AddWordModal";
-import BottomRightSideBar from "./components/BottomRightSideBar";
-import TopRightSideBar from "./components/TopRightSideBar";
-import LeftSideBar from "./components/LeftSideBar";
-import ListOfRecents from "./components/ListOfRecents";
-import AddPeeginForm from "./components/AddPeeginForm";
+import AddWordModal from "../components/AddWordModal";
+import BottomRightSideBar from "../components/BottomRightSideBar";
+import TopRightSideBar from "../components/TopRightSideBar";
+import LeftSideBar from "../components/LeftSideBar";
+import ListOfRecents from "../components/ListOfRecents";
+import AddPeeginForm from "../components/AddPeeginForm";
 
 const ThePeegins = (props) => {
   const isOpen = props.data1;
@@ -71,11 +71,14 @@ const ThePeegins = (props) => {
                 data3={setISOpen}
               />
             </div>
-            {/* <LeftSideBar data={peegins} /> */}
+            {/* <LeftSideBar woday={peegins} /> */}
           </div>
 
           <div className="peegindisplay">
-            <h3>Single Peegin</h3>
+            <div className="preview">
+              <h3>Single Peegin</h3>
+              {console.log(peegins)}
+            </div>
           </div>
 
           <div className="rightsidebar">
@@ -87,7 +90,7 @@ const ThePeegins = (props) => {
               data1={isOpen}
               data3={setISOpen}
             />
-            <BottomRightSideBar />
+            <BottomRightSideBar  />
           </div>
         </div>
       </div>

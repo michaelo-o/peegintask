@@ -10,7 +10,7 @@ const ListOfRecents = (props) => {
       {peegins &&
         peegins.map((peegin) => (
           <div className="preview" key={peegin?.permalink}>
-            <Link href={"/" + peegin?.permalink}>
+            <Link href={"/Singles/" + peegin?.permalink}>
               <a>
                 <h3 className="title">{peegin?.title}</h3>
               </a>
@@ -23,8 +23,8 @@ const ListOfRecents = (props) => {
               <h4>By</h4> &nbsp;
               <h4 className="namegreen">{peegin?.user?.name}</h4> &nbsp;
               <h4>{peegin?.created_at}</h4>
-            </div>
-            <p className="views">{peegin?.views?.view} Views</p>
+            </div> 
+           <p className="views">{peegin?.views?.view} Views</p>
           </div>
         ))}
     </div>

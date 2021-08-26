@@ -1,7 +1,8 @@
+import BottomRightSideBar from "./BottomRightSideBar";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-const Layout = ({ children }) => {
+const Layout = ({ children }, props) => {
   return (
     <div className="layoutcomponent">
       <Navbar />
