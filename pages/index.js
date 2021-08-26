@@ -6,6 +6,7 @@ import AddPeeginForm from "./components/AddPeeginForm";
 import TopRightSideBar from "./components/TopRightSideBar";
 import LeftSideBar from "./components/LeftSideBar";
 import BottomRightSideBar from "./components/BottomRightSideBar";
+import Image from "next/image";
 
 export async function getStaticProps() {
   const response = await fetch("https://peegin.com/api/public/peegins/recent");
@@ -74,7 +75,7 @@ const Homepage = ({ data }) => {
           example={example}
           name={name}
           data1={isOpen}
-          data2={setISOpen}
+          data3={setISOpen}
           submit={handleSubmit}
           addnew={open}
           addnew2={setOpen}
@@ -101,7 +102,7 @@ const Homepage = ({ data }) => {
         </div>
 
         <div className="peegindisplay">
-         <ListOfRecents data2={peegins} load={loading} />
+          <ListOfRecents data2={peegins} load={loading} />
         </div>
 
         <div className="rightsidebar">
@@ -115,6 +116,16 @@ const Homepage = ({ data }) => {
           />
           <BottomRightSideBar />
         </div>
+        {/* <div className="backtop">
+          <div>
+            <Image
+              src="/shuffle button.png"
+              alt="Random Peegin"
+              width={40}
+              height={40}
+            />
+          </div>
+        </div> */}
       </div>
     </div>
   );
