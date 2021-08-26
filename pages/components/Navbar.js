@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <Head>
-      {/* <Link rel="icon" href="/favicon2.webp" width={16} height={16} /> */}
+        {/* <Link rel="icon" href="/favicon2.webp" width={16} height={16} /> */}
       </Head>
       <div className="logo">
         <Link href="/">
@@ -22,9 +22,14 @@ const Navbar = () => {
 
       <div className="search">
         <form onSubmit={submit}>
-          <input type="text" placeholder="Search Peegin.." /> 
+          <input type="text" placeholder="Search Peegin.." />
           <button className="submitsearchbutton" type="submit">
-          <Image src="/search icon.png" alt="Submit Search" width={30} height={30} />
+            <Image
+              src="/search icon.png"
+              alt="Submit Search"
+              width={25}
+              height={26}
+            />
           </button>
           {/* <button className="mobilesearchsumbit" type="submit"> S </button> */}
         </form>
