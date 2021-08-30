@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import ListOfRecents from "./components/ListOfRecents";
 import { useState, useEffect } from "react";
 import AddWordModal from "./components/AddWordModal";
@@ -7,6 +8,7 @@ import TopRightSideBar from "./components/TopRightSideBar";
 import LeftSideBar from "./components/LeftSideBar";
 import BottomRightSideBar from "./components/BottomRightSideBar";
 import Image from "next/image";
+import Navbar from "./components/Navbar";
 
 export async function getStaticProps() {
   const response = await fetch("https://peegin.com/api/public/peegins/recent"); //https://peegin.com/api/public/peegins/recent
@@ -20,6 +22,8 @@ export async function getStaticProps() {
 const Homepage = ({ data }) => {
   const [peegins, SetPeegins] = useState([]);
   const [loading, SetLoading] = useState(true);
+
+  const [search, setSearch] = useState("");
 
   const [isOpen, setISOpen] = useState(false);
   const [addbutton, setAddButton] = useState("Add A New Word");
@@ -65,7 +69,7 @@ const Homepage = ({ data }) => {
       <Head>
         <title>Peegin Recent</title>
       </Head>
-
+      <Navbar search={search} setSearch={setSearch} />
       {isOpen ? (
         <AddPeeginForm
           title={title}
@@ -102,7 +106,13 @@ const Homepage = ({ data }) => {
         </div>
 
         <div className="peegindisplay">
-          <ListOfRecents data2={peegins} load={loading} />
+          <label>I never put the function for the main search bar, make una manage this one for now</label>
+          <input
+            type="text"
+            placeholder="Search Peegin.."
+            onChange={(event) => setSearch(event.target.value)}
+          />   
+          <ListOfRecents data2={peegins} load={loading} search={search} setSearch={setSearch}/>
         </div>
 
         <div className="rightsidebar">
