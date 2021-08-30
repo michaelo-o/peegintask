@@ -5,7 +5,21 @@ body {
   font-family: Calibri;
   background-color: #f1ecec;
 }
-
+.pagenotfound{
+  padding: 10% 5%;
+  padding-bottom: 20%;
+  margin: 0% auto;
+}
+.pnf{
+  padding: 5%;
+  background-color: white;
+  border-bottom: 2px solid blanchedalmond;
+  border-radius: 14px;
+  text-align: center;
+}
+.pnf>h3>a{
+  color: #28e2b7;
+}
 .wodhead {
   border-bottom: 0.1px solid black;
   text-align: center;
@@ -104,6 +118,7 @@ body {
   margin: 0;
   border-bottom: 2px solid blanchedalmond;
   border-radius: 14px;
+  scroll-behavior: none;
 }
 /* .preview:hover {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
@@ -214,7 +229,7 @@ textarea {
   border-radius: 12px;
   cursor: pointer;
 }
-.bx{
+.bx {
   display: none;
 }
 .addpeegin {
@@ -316,9 +331,13 @@ textarea {
   display: table;
 }
 
+.mobsearch1 {
+  display: none;
+}
 .mobilesearch {
   display: none;
 }
+
 .footer {
   display: flex;
   flex-direction: row;
@@ -408,7 +427,7 @@ h2 {
   .grid {
     padding: 3%;
   }
-  .bx{
+  .bx {
     display: inline;
   }
   .search {
@@ -418,39 +437,55 @@ h2 {
     align-items: flex-end;
     justify-content: flex-end;
   }
-  .mobsearch1{
-    width: 83%;
+
+  .mobsearch1 {
+    width: 100%;
     background-color: #28e2b7;
     border: 1px solid transparent;
     box-sizing: border-box;
-    padding: 2.5% 0%;
+    padding: 3% 0%;
     margin: 0;
-    top: 10%;
-    left: 5%;
     border-radius: 10px 0px 0px 10px;
-    float: left;
     position: absolute;
-    z-index: +1;
+    /* z-index: +1; */
+    top: 10%;
+    left: 1%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .closmobs {
+    background-color: #111d4a;
+    color: #ffd200;
+    border: none;
   }
   .mobsearch1 [type="text"] {
     width: 80%;
     border: 1px solid transparent;
     box-sizing: border-box;
-    padding: 9px 2%;
+    padding: 4% 15%;
     margin: 0;
     border-radius: 10px 0px 0px 10px;
     float: left;
   }
-  .mobsubmit{
+  .mobsearch1 [type="text"]::placeholder {
+    text-align: center;
+  }
+  .mobsearch1 [type="text"]:focus {
+    border: 1px solid transparent;
+    border-right: 3px outset #83a1c0a1;
+    outline: none;
+  }
+  .mobsubmit {
+    width: auto;
     cursor: pointer;
     background-color: white;
     border: none;
-    padding: 9px 1%;
+    padding: 4% 4%;
     margin: 0;
     float: left;
     border-radius: 0px 10px 10px 0px;
   }
-  
+
   .pencil {
     display: inline;
     background-color: transparent;
@@ -474,6 +509,9 @@ h2 {
   .navbar {
     padding: 5%;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
   }
 
   .leftsidebar .bottomrightsidebar .rightsidebar {
