@@ -1,24 +1,31 @@
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
-import { useState } from "react";
-const Navbar = () => {
-  function submit(event) {
-    event.preventDefault();
-    console.log("search sumitted");
-  }
+import { useState, useEffect } from "react";
+
+const Navbar = (props) => {
+  
+  const search = props.search;
+  const setSearch = props.setSearch;
+  console.log(search)
 
   const [showsbar, setSshowSBar] = useState(false);
   const [buttonC, setButtonC] = useState(true);
 
+  function submit(event) {
+    event.preventDefault();
+    setSearch(search)
+    console.log("search sumitted");
+  }
+  
   function toggleSearch() {
     console.log("mobsearch");
     setSshowSBar(!showsbar);
     setButtonC(!buttonC);
   }
-  function closeSearch() {
-    setSshowSBar(!showsbar);
-  }
+  // function closeSearch() {
+  //   setSshowSBar(!showsbar);
+  // }
   return (
     <nav className="navbar">
       <Head>
@@ -33,9 +40,18 @@ const Navbar = () => {
       </div>
 
       {showsbar ? ( //use Modal for this
+        // <div className="fles">
         <div className="mobsearch1">
+          <button className="closmobs" onClick={toggleSearch}>
+            X
+          </button>
+          &nbsp;
           <form onSubmit={submit}>
-            <input type="text" placeholder="Search Peegin.." />
+            <input
+              type="text"
+              placeholder="Search Peegin.."
+              onChange={(event) => setSearch(event.target.value)}
+            />
             <button className="mobsubmit" type="submit">
               <Image
                 src="/search icon.png"
@@ -46,11 +62,16 @@ const Navbar = () => {
             </button>
           </form>
         </div>
-      ) : null}
+      ) : // </div>
+      null}
 
       <div className="search">
         <form onSubmit={submit}>
-          <input type="text" placeholder="Search Peegin.." />
+          <input
+            type="text"
+            placeholder="Search Peegin.."
+            onChange={(event) => setSearch(event.target.value)}
+          />
           <button className="submitsearchbutton" type="submit">
             <Image
               src="/search icon.png"
@@ -60,9 +81,11 @@ const Navbar = () => {
             />
           </button>
         </form>
+
         <button className="mobilesearch" onClick={toggleSearch}>
           {buttonC}
         </button>
+
         {buttonC ? (
           <div className="bx">
             <Image
@@ -72,9 +95,7 @@ const Navbar = () => {
               height={19}
             />
           </div>
-        ) : (
-          <button>X</button>
-        )}
+        ) : null}
       </div>
     </nav>
   );
