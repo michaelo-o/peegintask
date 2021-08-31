@@ -106,12 +106,6 @@ const Homepage = ({ data }) => {
         </div>
 
         <div className="peegindisplay">
-          <label>I never put the function for the main search bar, make una manage this one for now</label>
-          <input
-            type="text"
-            placeholder="Search Peegin.."
-            onChange={(event) => setSearch(event.target.value)}
-          />   
           <ListOfRecents data2={peegins} load={loading} search={search} setSearch={setSearch}/>
         </div>
 
