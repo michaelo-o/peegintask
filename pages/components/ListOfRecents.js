@@ -11,9 +11,11 @@ const ListOfRecents = (props) => {
   const search = props.search;
   const setSearch = props.setSearch;
 
+  const [nores, SetNoRes] = useState('Recent 100 Peegin')
+
   return (
     <div>
-      <h1>Recent 100 Peegin</h1>
+      <h1>{nores}</h1>
       {loading && <h1 className="loading">Loading...</h1>}
       {peegins &&
         peegins
@@ -24,11 +26,13 @@ const ListOfRecents = (props) => {
               peegin?.title.toLowerCase().includes(search.toLowerCase())
             ) {
               return peegin;
-            }
+            } else if (
+              peegin?.title.toLowerCase().includes(search.toLowerCase())
+            ) return SetNoRes('No Results')
           })
           .map((peegin) => (
             <div className="preview" key={peegin?.permalink}>
-              <Link href={"/Peegins/" + peegin?.permalink}>
+              <Link href={"/peegins/" + peegin?.permalink}>
                 <a>
                   <h3 className="title">{peegin?.title}</h3>
                 </a>
