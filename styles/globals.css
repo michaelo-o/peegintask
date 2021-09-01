@@ -411,7 +411,40 @@ h2 {
 .mobileaddword {
   display: none;
 }
+.paginationBttns {
+  width: 90%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
 
+.paginationBttns a {
+  padding: 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid #111d4a;
+  color: #111d4a;
+  cursor: pointer;
+}
+
+.paginationBttns a:hover {
+  color: #ffd200;
+  background-color: #111d4a;
+}
+
+.paginationActive a {
+  color: #ffd200;
+  background-color: #111d4a;
+}
+
+.paginationDisabled a {
+  color: #111d4a;
+  background-color: #111d4a;
+}
+.paginationDisabled a:hover{
+  color: #111d4a;
+  background-color: #111d4a;
+}
 /* MOBILE STYLING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 @media only screen and (max-width: 700px) {
   .contentof {
@@ -437,7 +470,22 @@ h2 {
     align-items: flex-end;
     justify-content: flex-end;
   }
-
+  .paginationBttns {
+    width: 85%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .paginationBttns a {
+    padding: 5px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 1px solid #111d4a;
+    color: #111d4a;
+    cursor: pointer;
+  }
+ 
   .mobsearch1 {
     width: 100%;
     background-color: #28e2b7;
