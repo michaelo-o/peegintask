@@ -66,7 +66,7 @@ const AddPeeginForm = (props) => {
                 required
                 value={title}
                 onChange={(event) => setTitle(event.target.value)}
-              />{" "}
+              />
               <br />
               <br />
               <label>Enter The Meaning Of Your Word</label> <br />
@@ -75,7 +75,7 @@ const AddPeeginForm = (props) => {
                 required
                 value={meaning}
                 onChange={(event) => setMeaning(event.target.value)}
-              ></textarea>{" "}
+              ></textarea>
               <br />
               <br />
               <label>Make a Sentence With Your Word</label> <br />
@@ -84,19 +84,19 @@ const AddPeeginForm = (props) => {
                 required
                 value={example}
                 onChange={(event) => setExample(event.target.value)}
-              ></textarea>{" "}
+              ></textarea>
               <br />
               <br />
               <label>
                 English Words That Are Synonymous With Your Word
-              </label>{" "}
+              </label>
               <br />
               <input placeholder="eg. Help, Please" type="text" required />{" "}
               <br />
               <br />
               <label>
                 Where Did The Meaning Of This Word Originate From?
-              </label>{" "}
+              </label>
               <br />
               <input
                 placeholder="eg. Lagos"
@@ -104,7 +104,7 @@ const AddPeeginForm = (props) => {
                 required
                 value={origin}
                 onChange={(event) => setOrigin(event.target.value)}
-              />{" "}
+              />
               <br />
               <br />
               <label>Let Others Know You Added this Peegin</label> <br />
@@ -114,15 +114,15 @@ const AddPeeginForm = (props) => {
                 required
                 value={name}
                 onChange={(event) => setName(event.target.value)}
-              />{" "}
+              />
               <br />
               <br />
               <input
                 type="submit"
                 className="submitbutton"
                 value="Submit Your Peegin"
-              />{" "}
-              &nbsp;{" "}
+              />
+              &nbsp;
               <button onClick={backButton} className="backbutton">
                 Back
               </button>

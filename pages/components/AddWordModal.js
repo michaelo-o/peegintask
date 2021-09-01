@@ -14,7 +14,7 @@ const AddWordModal = (props) => {
   };
 
   return (
-    <>
+    <div>
       <div className="addNewWord">
         <button onClick={modalButton}>
           <div className="pencil">
@@ -29,7 +29,7 @@ const AddWordModal = (props) => {
           <p>{addbutton}</p>
         </button>
       </div>
-    </>
+    </div>
   );
 };
 
