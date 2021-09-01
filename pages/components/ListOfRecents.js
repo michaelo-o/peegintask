@@ -12,9 +12,9 @@ const ListOfRecents = (props) => {
 
   const [nores, SetNoRes] = useState('Recent 100 Peegin')
 
-  useEffect(() => {
-    setSearch("")
-  }, [peegins])
+  // useEffect(() => {
+  //   setSearch("")
+  // }, [peegins])
 
   //everything paginate here
   // const peeginsSliced = peegins.slice(0, 50)
@@ -92,7 +92,7 @@ const ListOfRecents = (props) => {
   return (
     <div>
       <h1>{nores}</h1>
-      {loading && <h1 className="loading">Loading...</h1>}
+      {/* {loading && <h1 className="loading">Loading...</h1>} */}
 
       {displayPeegins}
 
@@ -101,7 +101,6 @@ const ListOfRecents = (props) => {
         nextLabel={'Next'}
         pageCount={pageCount}
         onPageChange={changePage}
-
         //this is where the classname for the styles go
         containerClassName={"paginationBttns"}
         previousLinkClassName={"previousBttn"}
