@@ -18,10 +18,7 @@ const TermsOfService = () => {
           <Link href="/termsofservice">
             <a> http://peegin.com/pages/terms </a>
           </Link>
-          Questions about the Terms of Service may be sent to this address:
-          <Link href="legal@peegin.com">
-            <a target="_blank"> legal@peegin.com</a>
-          </Link>
+          Questions about the Terms of Service may be sent to this address:legal@peegin.com
         </p>
         <h2>Usage Terms</h2>
         <p>
@@ -83,7 +80,7 @@ const TermsOfService = () => {
         <h2>User Conduct</h2>
         <p>
           Users may not publish to the Website any words, definitions, or other
-          information (collectively, “Content”) that:
+          information (collectively, “Content”) that:</p>
           <ul>
             <li>is unlawful, threatening, libelous or defamatory;</li>
             <li>violates any party’s intellectual property; or</li>
@@ -91,8 +88,8 @@ const TermsOfService = () => {
               is detrimental to the quality or intended spirit of the Website.
             </li>
           </ul>
-          Examples of unacceptable Content or behavior on the Website are those
-          which we, in our sole discretion, determine constitute:
+          <p>Examples of unacceptable Content or behavior on the Website are those
+          which we, in our sole discretion, determine constitute:</p>
           <ul>
             <li>
               abuse, harassment, threats of violence, flaming, intimidation of
@@ -126,8 +123,6 @@ const TermsOfService = () => {
             Thats for the real company though, not sure if it applies to a
             cloned site 🤷‍♂️
           </h3>
-        </p>
-
         <p>
           At any time, the Company may, at its sole discretion, refuse to allow
           Content to be published, or remove Content that has been published.
@@ -188,7 +183,7 @@ const TermsOfService = () => {
         </p>
         <p>
           Use of the Website is also governed by our Privacy Policy, a copy of
-          which is currently located at{" "}
+          which is currently located at:
           <Link href="/privacypolicy">
             <a> http://peegin.com/pages/privacy </a>
           </Link>

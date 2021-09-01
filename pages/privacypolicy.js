@@ -159,10 +159,7 @@ const PrivacyPolicy = () => {
           <h2>Questions</h2>
           <p>
             Any questions about this Privacy Policy should be addressed to this
-            address:
-            <Link href="legal@peegin.com">
-              <a target="_blank"> legal@peegin.com</a>
-            </Link>
+            address: legal@peegin.com
           </p>
           <p>Updated: August 2016</p>
         </div>
