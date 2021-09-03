@@ -33,33 +33,33 @@ const BottomRightSideBar = (props) => {
           </a>
         </Link>
         </p>
-        <p><Link href={"/peegins/" + trend?.permalink}>
+        <p><Link href={"/peegins/" + trend2?.permalink}>
           <a
             className="trend">{trend2?.title}
           </a>
         </Link></p>
 
-        <p><Link href={"/peegins/" + trend?.permalink}>
+        <p><Link href={"/peegins/" + trend3?.permalink}>
           <a
             className="trend">{trend3?.title}
           </a>
         </Link></p>
 
-        <p><Link href={"/peegins/" + trend?.permalink}>
+        <p><Link href={"/peegins/" + trend4?.permalink}>
           <a
             className="trend">{trend4?.title}
           </a>
         </Link></p>
 
         <p>
-          <Link href={"/peegins/" + trend?.permalink}>
+          <Link href={"/peegins/" + trend5?.permalink}>
             <a
               className="trend">{trend5?.title}
             </a>
           </Link>
         </p>
         <p>
-          <Link href={"/peegins/" + trend?.permalink}>
+          <Link href={"/peegins/" + trend6?.permalink}>
             <a
               className="trend">{trend6?.title}
             </a>
