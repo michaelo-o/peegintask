@@ -74,7 +74,7 @@ const ListOfRecents = (props) => {
                   Share &nbsp;
                   <Link
                     className="shb"
-                    href="http://www.facebook.com/sharer/sharer.php?u="
+                    href="http://www.facebook.com/sharer/sharer.php?u=https://peegintask.vercel.app/"
                   >
                     <a target="_blank">
                       <Image
@@ -86,7 +86,7 @@ const ListOfRecents = (props) => {
                     </a>
                   </Link>
                   &nbsp;
-                  <Link href="https://twitter.com/intent/tweet?url=">
+                  <Link href="https://twitter.com/intent/tweet?url=https://peegintask.vercel.app/">
                     <a target="_blank">
                       <Image
                         src="/twittershare.png"
