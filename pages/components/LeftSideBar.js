@@ -18,7 +18,7 @@ const LeftSideBar = (props) => {
           <h2>Word of the day</h2>
           <h4>(Actually just a Random Peegin)</h4>
         </div>
-        <Link href={"/Peegins/" + wods?.permalink}>
+        <Link href={"/peegins/" + wods?.permalink}>
               <a>
                 <h3 className="title">{wods?.title}</h3>
               </a>

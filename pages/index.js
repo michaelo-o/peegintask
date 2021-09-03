@@ -11,6 +11,7 @@ import Image from "next/image";
 import Navbar from "./components/Navbar";
 import store from "../store/store"
 import { useSnapshot } from "valtio";
+import SideInfo from "./components/SideInfo";
 
 export async function getStaticProps() {
   const response = await fetch("https://peegin.com/api/public/peegins/recent"); //https://peegin.com/api/public/peegins/recent
@@ -25,7 +26,7 @@ const Homepage = ({ data }) => {
   const [peegins, SetPeegins] = useState([]);
   const [loading, SetLoading] = useState(true);
 
- 
+
 
   const [search, setSearch] = useState("");
 
@@ -34,9 +35,9 @@ const Homepage = ({ data }) => {
 
   useEffect(() => {
     SetPeegins(data.peegins)
-      //is == data.peegins when using real api- this is due to the fact that data is an object and peeging is a property with the array of objects that has our data
-      SetLoading(false);
-      store.peegins = data.peegins
+    //is == data.peegins when using real api- this is due to the fact that data is an object and peeging is a property with the array of objects that has our data
+    SetLoading(false);
+    store.peegins = data.peegins
   }, [data]); //run anytime data changes
 
   const [title, setTitle] = useState("");
@@ -112,7 +113,7 @@ const Homepage = ({ data }) => {
         </div>
 
         <div className="peegindisplay">
-          <ListOfRecents data2={peegins} load={loading} search={search} setSearch={setSearch}/>
+          <ListOfRecents data2={peegins} load={loading} search={search} setSearch={setSearch} />
         </div>
 
         <div className="rightsidebar">
@@ -124,9 +125,12 @@ const Homepage = ({ data }) => {
             data1={isOpen}
             data3={setISOpen}
           />
-          <BottomRightSideBar />
-        </div>
-        {/* <div className="backtop">
+          <BottomRightSideBar trend={peegins} />
+          
+          <SideInfo />
+          
+      </div>
+      {/* <div className="backtop">
           <div>
             <Image
               src="/shuffle button.png"
@@ -136,8 +140,8 @@ const Homepage = ({ data }) => {
             />
           </div>
         </div> */}
-      </div>
     </div>
+    </div >
   );
 };
 

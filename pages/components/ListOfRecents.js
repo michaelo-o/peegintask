@@ -20,8 +20,6 @@ const ListOfRecents = (props) => {
   }, [peegins])
 
   //everything paginate here
-  // const peeginsSliced = peegins.slice(0, 50)
-  // const [peeginsSliced, setpeeginsSliced] = useState(peegins.slice(0, 50))
 
   const [pageNumber, setpageNumber] = useState(0)
   const peeginsPerPage = 20
@@ -72,7 +70,7 @@ const ListOfRecents = (props) => {
               </div>
               <div className="viewsandshare">
                 <p className="views">{peegin?.views?.view} Views</p>
-                <p className="share">
+                <div className="share">
                   Share &nbsp;
                   <Link
                     className="shb"
@@ -98,7 +96,7 @@ const ListOfRecents = (props) => {
                       />
                     </a>
                   </Link>
-                </p>
+                </div>
               </div>
             </div>
 

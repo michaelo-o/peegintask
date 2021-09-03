@@ -20,9 +20,27 @@ body {
 .pnf>h3>a{
   color: #28e2b7;
 }
+
+.tdiv{
+  display: flex;
+  flex-direction: row;
+  padding-left: 0 !important;
+   margin-bottom: 5px;
+   max-width: 10%;
+  }
+
 .wodhead {
   border-bottom: 0.1px solid black;
   text-align: center;
+}
+.trend {
+  background-color: #28e2b7;
+  color: white;
+  width: fit-content;
+  padding: 7px 10px;
+  border-radius: 12px;
+  margin-top: 0%;
+  display: inline-block;
 }
 .content {
   margin: 0px auto;
@@ -80,9 +98,15 @@ body {
   margin-top: 5%;
   border-bottom: 2px solid blanchedalmond;
   border-radius: 14px;
+  margin-bottom: 0;
 }
 .bottomrightsidebar > h2 {
   font-weight: lighter;
+}
+.stuffunder{
+  padding: 0 20px;
+  margin-top: 0;
+  color: rgb(97, 93, 93);
 }
 .backtop {
   display: flex;
@@ -207,7 +231,7 @@ textarea {
 .title {
   background-color: #ffd200;
   width: fit-content;
-  padding: 10px;
+  padding: 6px;
   border-radius: 5px;
 }
 .origin {
@@ -426,7 +450,11 @@ h2 {
   color: #111d4a;
   cursor: pointer;
 }
-
+.bbuton{
+  color: #28e2b7;
+  padding-top: 1.5% ;
+  font-weight: 520;
+}
 .paginationBttns a:hover {
   color: #ffd200;
   background-color: #111d4a;
@@ -440,6 +468,7 @@ h2 {
 .paginationDisabled a {
   color: #111d4a;
   background-color: #111d4a;
+  cursor: not-allowed;
 }
 .paginationDisabled a:hover{
   color: #111d4a;
