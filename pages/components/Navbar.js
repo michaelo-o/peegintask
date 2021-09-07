@@ -29,7 +29,8 @@ const Navbar = (props) => {
   return (
     <nav className="navbar">
       <Head>
-        {/* <Link rel="icon" href="/favicon2.webp" width={16} height={16} /> */}
+        <meta name="description" content="Clone of Peegin.com" />
+        <link rel="icon" href="/favicon1.ico" />
       </Head>
       <div className="logo">
         <Link href="/">
