@@ -354,7 +354,7 @@ textarea {
 }
 .logo {
   padding: 0;
-  width: 10%;
+  width: 9%;
   margin-left: 7%;
 }
 .search [type="text"] {
@@ -371,15 +371,72 @@ textarea {
   border-right: 3px outset #83a1c0a1;
   outline: none;
 }
+/* Profile Info */
 
+.profilemodal{
+  width: 25%;
+  position: absolute;
+  right: 2%;
+  z-index: +1;
+  margin: 2% auto;
+  margin-bottom: 0;
+  background-color: brown;
+  border: 1px solid purple;
+  box-shadow: 0px 0px 8px 0px  purple;
+  padding: 15px;
+  overflow-x: hidden;
+  /* text-align: center; */
+}
+.profilemodal>p:hover {
+  color: white;
+}
+.textBeforeProfile:hover{
+  color: white !important; 
+}
+.profileName{
+  color: purple !important;
+  cursor: pointer;
+}
+.profileName:hover{
+  text-shadow: -3px 1px 24px purple !important;
+  cursor: pointer;
+}
+
+.backbutton {
+  cursor: pointer;
+  padding: 6px 12px;
+  background-color: #3a434c;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+/* Login/logout buttons */
+.btn {
+  padding: 10px 16px;
+  border: 2px solid purple;
+  border-radius: 15px;
+  font-weight: 600;
+  color: purple;
+  cursor: pointer;
+  text-align: center;
+  transition: ease-in-out .5s;
+  width: fit-content;
+  margin-left: 2%;
+}
+.btn:hover {
+  color: white;
+  background-color: purple;
+}
 /*CENTRALIZE INPUT PLACEHOLDER*/
 .search [type="text"]::placeholder {
   text-align: center;
 }
 .search {
-  width: 80%;
+  width: 75%;
   margin: auto;
   padding: 0;
+  margin-left: 2%;
 }
 .submitsearchbutton {
   cursor: pointer;
@@ -518,6 +575,8 @@ h2 {
   color: #111d4a;
   background-color: #111d4a;
 }
+
+
 /* MOBILE STYLING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 @media only screen and (max-width: 700px) {
   .contentof {

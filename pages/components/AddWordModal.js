@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useContext, useState } from 'react'
 import AddPeeginForm from "./../components/AddPeeginForm";
 import Image from "next/image";
 
@@ -12,6 +12,8 @@ const AddWordModal = (props) => {
     setISOpen(!isOpen);
     isOpen ? setAddButton("Adding Peegin...") : setAddButton("Add A New Word");
   };
+
+
 
   return (
     <div>

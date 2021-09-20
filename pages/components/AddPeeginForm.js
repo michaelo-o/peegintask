@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
 import AddWordModal from "./AddWordModal";
+import { useEffect, useContext, useState } from 'react'
+import AuthContext from "../../stores/authContext";
 
 const AddPeeginForm = (props) => {
   const isOpen = props.data1;
@@ -46,6 +47,41 @@ const AddPeeginForm = (props) => {
     setOpen("Add New Word");
   };
 
+  //Auth stuff here
+  const { user, authReady, login } = useContext(AuthContext)
+  const [peegins, setpeegins] = useState(null)
+  const [error, seterror] = useState(null)
+
+  useEffect(() => {
+    if (authReady) { //this is so that it can be sure if we are signed in or not before sending the fetch request
+      fetch('/.netlify/functions/peegins', user && //so that this only runs of there is a user avialable, if it runs when there is no user, we get an error
+      {
+        headers: {
+          Authorization: 'Bearer ' + user.token.access_token //what needs to be sent to netlify so they know a user is logged in
+          //if the user token is not sent in when we make the fetch request, it would not know we are logged in
+        }
+      })
+        .then(res => {
+          if (!res.ok) { //if response is not ok, i.e if it is false, we should show an error message, because it means we are not authenticated
+            login()
+            throw Error('You gotta Log in to view the cool Lorem Ipsums')
+          }
+          return res.json() // if the reesponse is okay, we do not see an error message, and we return the json data we can actually use and carry on with the rest of the function, that is setting the state of lorems to be the data we get
+        }) //turns it into json,something we can actually use
+        .then(data =>
+          setpeegins(data), // if there is no error, then set the state of lorems to be the data we recieved
+          seterror(null) //then make this null since there is no error
+        )
+        .catch(err => {
+          seterror(err.message)
+          setpeegins(null) //when they log out, this should be re set back to null
+        })
+    }
+
+  }, [user, authReady]) //so ths functions runs automatically if the user changes or our authentication status changes
+
+
+  
   return (
     <>
       <div className="modal">
