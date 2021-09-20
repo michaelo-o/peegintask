@@ -8,7 +8,7 @@ const Layout = ({ children }, props) => {
   return (
     <div className="layoutcomponent">
       <Navbar search={search} setSearch={setSearch}/>
-      {children}
+     {children} 
       <Footer />
     </div>
   );

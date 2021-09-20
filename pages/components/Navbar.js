@@ -38,13 +38,13 @@ const Navbar = (props) => {
   const outside = useRef()
 
   const [openProfile, setOpenProfile] = useState(false);
-  const [dangerzone, setdangerzone] = useState(false)
+  const [loginModal, setloginModal] = useState(false)
 
   const handleClick = event => {
     if (outside.current.contains(event.target)) {  //.current is a method that useRef uses
       return
     }
-    setOpenProfile(false)
+    setloginModal(false)
   }
 
   useEffect(() => {
@@ -57,11 +57,12 @@ const Navbar = (props) => {
   }, [])
 
 
-  function profile() {
-    setOpenProfile(!openProfile)
+
+  function closeLogin() {
+    setloginModal(false)
   }
-  function danger() {
-    setdangerzone(!dangerzone)
+  function openLogin() {
+    setloginModal(!loginModal)
   }
   function closeProfile() {
     setOpenProfile(false)
@@ -74,7 +75,7 @@ const Navbar = (props) => {
         <meta name="description" content="Clone of Peegin.com" />
         <link rel="icon" href="/favicon1.ico" />
       </Head>
-      <div className="logo">
+      <div className="logo" >
         <Link href="/">
           <a>
             <Image src="/logo.png" alt="site logo" width={170} height={53} />
@@ -84,7 +85,7 @@ const Navbar = (props) => {
 
       {showsbar ? ( //use Modal for this
         // <div className="fles">
-        <div className="mobsearch1">
+        <div className="mobsearch1" >
           <button className="closmobs" onClick={toggleSearch}>
             X
           </button>
@@ -108,12 +109,13 @@ const Navbar = (props) => {
       ) : // </div>
         null}
 
-      <div className="search">
-        <form onSubmit={submit}>
+      <div className="search" >
+        <form onSubmit={submit} >
           <input
             type="text"
             placeholder="Search Peegin.."
             onChange={(event) => setSearch(event.target.value)}
+
           />
           <button className="submitsearchbutton" type="submit">
             <Image
@@ -140,40 +142,39 @@ const Navbar = (props) => {
           </div>
         ) : null}
 
-        {authReady &&
-          <div className="links">
-            {!user && <p onClick={login} className="btn">Login/Signup</p>}
-            {/* password 12lorem */}
 
-            {user && <p className="textBeforeProfile">Logged in as <span onClick={profile} className="profileName">{user.user_metadata.full_name}</span></p>}
-
-
-            {user && openProfile ? (
-
-              <div>
-                <div className="profilemodal">
-                  <button onClick={closeProfile} className="backbutton">
-                    Close
-                  </button>
-                  <h2>Profile Info</h2>
-                  <p>Username: {user.user_metadata.full_name}</p>
-                  <p>Email: {user.email}</p>
-                  <p>Date Created: {user.created_at}</p>
-                  <p onClick={logout} className="btn">Log Out</p>
-
-                </div>
-              </div>
-
-            ) : null
-            }
-
-            {/* {user && <p onClick={logout} className="btn">Log Out</p>} */}
-          </div>
-
-
-        }
 
       </div>
+      {/* password 12lorem */}
+
+      <div className="loginmodal">
+        <button className="usericon" onClick={openLogin}>
+          <Image
+            src="/user1-removebg-preview.png"
+            alt="Submit Search"
+            width={60}
+            height={40}
+          />
+        </button>
+
+      </div>
+
+
+      {loginModal && (
+        <div>
+          <div className="profilemodal">
+            <button onClick={closeLogin} className="backbutton">
+              Close
+            </button>
+            {user && <div className="loggedinas">
+              <h1 className="h11"> Logged in as</h1>  <h1>{user.user_metadata.full_name}</h1>
+            </div>
+            }
+            {!user && <h1 onClick={login} className="btn">Login/Signup</h1>}
+            {user && <h1 onClick={logout} className="btn">Log Out</h1>}
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
