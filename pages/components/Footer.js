@@ -26,7 +26,7 @@ const Footer = () => {
       <div className="project">
         <p>
           A Side Project by
-          <Link href="https://www.upwork.com/freelancers/~018a014dbbe3506e8b?s=1110580755057594368">
+           <Link href="https://www.upwork.com/freelancers/~018a014dbbe3506e8b?s=1110580755057594368">
             <a target="_blank"> Michael Okwuosah</a>
           </Link>
         </p>
